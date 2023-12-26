@@ -50,6 +50,38 @@ color:$bg;
 
 ```
 
+## We have a two different flavors of sass.
+
+Syntax Versions
+
+### SASS Format
+1. sass(indented formet)
+2. No punctuation
+3. Meaningful whitespace
+4. We also no need of semicolons
+
+```sass
+
+$bg : red
+
+body
+  background:$bg
+
+```
+### SCSS Format
+
+1. .scss (Sassy css formet)
+2. CSS compatible-if you have a css file you can just transpile css file to scss file.
+3. Most popular
+4. ```sass
+
+$bg : red;
+
+body {
+  background:$bg;
+}
+```
+
 
 
 
