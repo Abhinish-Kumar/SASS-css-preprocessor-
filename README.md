@@ -187,6 +187,37 @@ h1{
 
 ```
 
+## Nesting
+SCSS allow us to place rules inside other rules.
+This is known as nesting It allows to write code lot easier.
+
+### SASS Nesting
+
+1. Combines rules.
+2. Extra CSS.(make complax to red)
+3. Bandwidth (more time to be transpiled so not nest deeply)
+
+Note :- first write the css for box and then write the rules of nested elements.
+
+```scss
+
+.box{
+
+padding:1rem 2rem;
+background:beige;
+color:black;
+
+h1,p{
+margin:0;
+}
+h1{
+color:red;
+}
+
+}
+
+```
+
 
 
 
