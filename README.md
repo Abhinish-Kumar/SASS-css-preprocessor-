@@ -60,7 +60,7 @@ Syntax Versions
 3. Meaningful whitespace
 4. We also no need of semicolons
 
-```sass
+```css
 
 $bg : red
 
@@ -73,18 +73,119 @@ body
 1. .scss (Sassy css formet)
 2. CSS compatible-if you have a css file you can just transpile css file to scss file.
 3. Most popular
-4. ```sass
+4.
+
+```css
 
 $bg : red;
 
 body {
   background:$bg;
 }
+
+```
+
+# Sass Variables
+The only difference between variable of normal css is that the scss variable has to be converted to the normal css.
+
+
+```css
+
+$bg : red;
+
+body {
+  background:$bg;
+}
+
+```
+
+#### Rules of varibel 
+
+1. $Name
+2. <variable>:<expression>
+3. Compile to css
+
+### Variable scope
+
+Variables can normally have a global scope
+
+```css
+
+$primary-color:red;
+
+h1{
+     $primary-color:yellow;
+     color:css$primary-color;
+}
+
+p{
+color:$primary-color;
+}
+
 ```
 
 
+1. Top Level (Global)
+2. Curly Braces(Local)
+3. Shadowing:-Local variable can have same name of global variable that is called as shadowing.
 
 
+##### Practice
+
+```scss
+
+$primary-color:skyblue;
+
+h1{
+  color:$primary-color;
+}
+
+p{
+  $primary-color:pink;
+  color: $primary-color;
+}
+
+```
+
+### Global Flag
+We redefine the primarry color of global varibale by adding a flag to it.
+
+1. Redefinines globals.
+2. Not for new vars.
+
+```scss
+
+$primary-color:skyblue;
+
+h1{
+  color:$primary-color;
+}
+
+p{
+  $primary-color:rgb(214, 43, 72) !global;
+  color: $primary-color;
+}
+
+h1{
+  color:$primary-color;
+}
+
+```
+
+### Underscores vs Hyphens
+In variables name the Underscores are same as Hyphen.like "" and ''.
+
+```scss
+
+$primary-color:skyblue;
+$primary_color:rgb(206, 156, 17);
+
+h1{
+  color:$primary-color;
+}
+
+
+```
 
 
 
