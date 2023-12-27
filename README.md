@@ -218,7 +218,35 @@ color:red;
 
 ```
 
+## Partials(import and export)
 
+1. Start with an underscore _
+2. @use copies code.
+3. Namespaced variables.
+4. Use a shortcut.(var)
+
+```scss
+
+//_variable.scss
+$bg:red;
+$primarry:SlateBlue;
+
+
+
+//_base.scss
+@use "variables";
+body{
+background:variables.$bg;
+}
+
+//style.scss
+@use "variables" as var;
+@use "base";
+h1{
+color:var.$primarry;
+}
+
+```
 
 
 
